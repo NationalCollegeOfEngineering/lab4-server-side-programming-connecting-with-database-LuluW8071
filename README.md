@@ -1,0 +1,11 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/1F_pcGNd)
+
+### Form validation with Php and MySQL database
+#### Note:  
+Change the **table_name** to your own table in MySQL database
+```
+<!-- home.php -->
+$select_query = "SELECT * FROM table_name WHERE name = :username AND password = :password";
+<!-- signup.php -->
+$insert_query = "INSERT INTO table_name(name, password, address) VALUES (:username, :password, :address)";
+```
