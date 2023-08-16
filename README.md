@@ -9,11 +9,18 @@
     </div>
   </div>
 
+### Ajax Search
+<img src="images/Images4.png" alt="AjaxSearch">
+
 #### Note:  
 Change the **table_name** to your own table in MySQL database
 ```
 <!-- home.php -->
 $select_query = "SELECT * FROM table_name WHERE name = :username AND password = :password";
+
 <!-- signup.php -->
 $insert_query = "INSERT INTO table_name(name, password, address) VALUES (:username, :password, :address)";
+
+<!-- server.php -->
+$select_query = "SELECT username, address, contact FROM table_name WHERE username LIKE '%".$_GET['search']."%'";
 ```
