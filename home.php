@@ -1,22 +1,4 @@
 <?php
-// session_start();
-// include('helper/database.php');
-// // error_reporting(0);
-
-// if ($_SESSION['is_login'] != 'yes') {
-//     // $username = $_POST['name'];
-//     // $password = $_POST['password'];
-//     if ($_POST['username'] == 'admin' && $_POST['password'] == 'admin123') {
-//         // set session/ cookies
-//         $_SESSION['is_login'] = 'yes';
-//         echo 'sdasd';
-
-//     } else {
-//         $_SESSION['is_login'] = 'no';
-//         session_destroy();
-//         header("location: /home/index.php");
-//     }
-// }
 
 require_once "helper/database.php";
 $pdo = connectDatabase();
@@ -153,7 +135,6 @@ if ($login_error) {
                 </table>
                 <footer>
                     <?php include_once('layout/footer.php'); ?>
-                    
                 </footer>
             </div>
             <br>

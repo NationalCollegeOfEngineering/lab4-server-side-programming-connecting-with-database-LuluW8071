@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+:root {
+    --body-color: 48 48 58;
+
+    --font-color: 255 255 255;
+    --highlight-color: 0 0 0;
+
+    --theme-background: 20 20 20;
+
+    --theme-light: 0 0 0;
+    --theme-medium: 0 0 0;
+    --theme-dark: 0 0 0;
+}
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    /* For Safari support */
+    background-attachment: fixed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button,
+a,
+input {
+    outline: none;
+}
+
+.highlight {
+    color: rgb(var(--highlight-color));
+}
+
+
+#search-container {
+    display: flex;
+    gap: 0.2rem;
+    margin-top: 0.2rem;
+    justify-content: center;
+
+}
+
+#search-input-container>input,
+#search-container>button {
+    background-color: rgb(255 255 255 / 10%);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    border: none;
+}
+
+#search-input-container:has(input:focus),
+#search-container>button:focus {
+    background-color: rgb(255 255 255 / 16%);
+}
+
+#search-container>button {
+    width: 3.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+#search-container>#image-button {
+    border-bottom-right-radius: 0.5rem
+}
+
+#search-container>#image-button:hover {
+    background-color: red;
+    transition: 0.3s ease-in;
+
+}
+
+#search-input-container {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 1rem;
+    border-radius: 0.2rem;
+    border-bottom-left-radius: 0.5rem;
+    transition: width 0.6s ease-in-out;
+}
+
+#search-input-container:hover {
+    width: 500px;
+}
+
+#search-container:hover #image-button {
+    background-color: red !important;
+    transition: 0.3s ease-in;
+}
+
+#search-input-container>img {
+    height: 1.5rem;
+}
+
+#search-input-container>input {
+    width: 100%;
+    height: 3.25rem;
+    background-color: transparent;
+    padding: 1rem;
+    padding-left: 0rem;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+}
+
+.searchContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#search-container:hover #image-button {
+    background-color: rgb(255, 0, 0) !important;
+    transition: 0.3s ease-in;
+}
+
+/* Style for Search Results Heading */
+#search-heading {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  /* Style for Search Results */
+#search_result {
+    color: white;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.638);
+}
